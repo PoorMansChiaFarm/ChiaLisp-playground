@@ -1,0 +1,65 @@
+
+
+(mod 
+    (
+    parent_amount
+    amount_to_divide
+    p2_puzzlehash
+    )
+
+    (include condition_codes.clib)
+
+
+
+
+;Return a total form a list of intergers (list I1 I2 I3 In)
+    (defun sum_list (interger_list)
+        (if (l interger_list )
+        
+            (+ (f interger_list) (sum_list (r interger_list)))
+            
+            0
+        )
+    )
+            
+
+    (defun create_amounts_list (amount_to_divide)
+        (list 
+            (/ amount_to_divide 2)
+            (/ amount_to_divide 5)
+            (/ amount_to_divide 10)
+            (/ amount_to_divide 20)
+            (/ amount_to_divide 50)
+            (/ amount_to_divide 100)
+        
+        )
+    
+    )
+
+    (defun calculate_change (
+       parent_amount
+       amount_to_divide
+       change_list
+       );
+
+        (+ (- parent_amount amount_to_divide) (- amount_to_divide sum_list (change_list)))   
+    )
+
+    
+    (list 
+        
+        (sum_list (list 20 30 40))
+        (create_amounts_list ( amount_to_divide ))
+        
+    )
+
+        ;(calculate_change ( parent_amount amount_to_divide (create_amounts_list ( amount_to_divide ))))
+        
+        
+        
+    
+
+    
+
+
+)

@@ -1,0 +1,1 @@
+(a (q 4 (a 6 (c 2 (q (divmod 30 40)))) (c (a 4 (c 2 (c (a 11 (c 2 ())) ()))) ())) (c (q (c (f (divmod 5 (q . 2))) (c (f (divmod 5 (q . 5))) (c (f (divmod 5 (q . 10))) (c (f (divmod 5 (q . 20))) (c (f (divmod 5 (q . 50))) (c (f (divmod 5 (q . 100))) ())))))) 2 (i (l 5) (q 16 9 (a 6 (c 2 (c 13 ())))) ()) 1) 1))
