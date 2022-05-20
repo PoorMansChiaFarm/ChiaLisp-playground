@@ -2,6 +2,7 @@
 
 (mod 
     (
+    FIX_FEE_AMOUNT
     parent_amount
     amount_to_divide
     p2_puzzlehash
@@ -9,6 +10,9 @@
 
     (include condition_codes.clib)
 
+
+;todo assert that my amount is the some as parent amount so no amount can be burn't as fees 
+;or manybe assert a fixed fee amount (1000 mojo) wich will need to be taken from parent amount
 
 
 
@@ -50,6 +54,10 @@
         
         (sum_list (list 20 30 40))
         (create_amounts_list ( amount_to_divide ))
+
+        ; assert all_coin_amounts + spare_change == parent_amount <- to assert nothing wacky is happening 
+
+        (ASSERT_MY_AMOUNT parent_amount) ; makes sure that the provided parent amount is equal to the coins amount preventing fee harvesting by setting perant amount lower
         
     )
 
